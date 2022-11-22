@@ -24,7 +24,7 @@ const db = require("./models/connection");
 // });
 db.sequelize.sync();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, (error) => {
   if (!error) console.log(`Server is Successfully Running on ${PORT} port`);

@@ -17,8 +17,6 @@ const getRecibos = async (req, res) => {
 };
 
 const postRecibo = async (req, res) => {
-  console.log(req.body);
-
   try {
     const newRecibo = await Recibo.create({
       razonsocial: req.body.form.razonsocial,
@@ -32,7 +30,6 @@ const postRecibo = async (req, res) => {
       lugaryfecha: "Parana, Entre Rios " + getDate(),
       userId: req.userId,
     });
-    console.log("ACA");
     res.send();
   } catch (err) {
     res.status(500).send({ message: err.message });
